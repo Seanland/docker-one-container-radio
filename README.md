@@ -18,16 +18,16 @@ docker run -p 8000:8000 -e ICES_NAME=Seanland -e ICECAST_ADMIN_USER=seanland -e 
 ## Support Environment Variables
 | Variable     | Type | Description |
 |--------------|:-----:|:-----:|
-| ICES_NAME |  Str |
-| ICECAST_ADMIN_USER |  Str |
-| ICECAST_ADMIN_EMAIL |  Str |
-| ICECAST_ADMIN_PASSWORD | Str |
+| ICES_NAME |  Str | Public Name of the Stream |
+| ICECAST_ADMIN_USER |  Str | Icecast Admin Username |
+| ICECAST_ADMIN_EMAIL |  Str | Icecast Admin Email |
+| ICECAST_ADMIN_PASSWORD | Str | Icecast Admin Password |
 
 ## To Do ##
- - [ x ] Update parameters for username and passwords
+ - [x] Update parameters for username and passwords
  - [ ] Add Customizations
- - [ x ] Update Readme
- - [ x ] Add Parameters
+ - [x] Update Readme
+ - [x] Add Parameters
  - [ ] Build Docker Compose (other forms to deploy)
  - [ ] Modify exposed volumes for log access / addition information
 
