@@ -1,8 +1,6 @@
 # One Container Radio
 Using Ices2 and Icecast2, the goal is to build a simple, single container deployment.  One should be able to fill few parameters and direct the container to a music folder or share giving them a basic self hosted random music stream. (Reword)
 
-** Note: Usernames / Passwords are defaulted currently.  Change them if you decide to use this... **
-
 ** Warning: Work in progress, Docker experimenting.  Please improve if you would like! Thanks :) **
 
 ## Usage ##
@@ -15,14 +13,21 @@ Using Ices2 and Icecast2, the goal is to build a simple, single container deploy
 (Below is based on a local build)
 
 ```bash
-docker run -p 8080:8000 -v d:/music:/media -t docker-one-container-radio:latest
+docker run -p 8000:8000 -e ICES_NAME=Seanland -e ICECAST_ADMIN_USER=seanland -e ICECAST_ADMIN_EMAIL=me@seanland.ca -e ICECAST_ADMIN_PASSWORD=seanland -v d:/music:/media -t docker-one-container-radio:latest
 ```
+## Support Environment Variables
+| Variable     | Type | Description |
+|--------------|:-----:|:-----:|
+| ICES_NAME |  Str |
+| ICECAST_ADMIN_USER |  Str |
+| ICECAST_ADMIN_EMAIL |  Str |
+| ICECAST_ADMIN_PASSWORD | Str |
 
 ## To Do ##
- - [ ] Update parameters for username and passwords
+ - [ x ] Update parameters for username and passwords
  - [ ] Add Customizations
- - [ ] Update Readme
- - [ ] Add Parameters
+ - [ x ] Update Readme
+ - [ x ] Add Parameters
  - [ ] Build Docker Compose (other forms to deploy)
  - [ ] Modify exposed volumes for log access / addition information
 
