@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:kinetic
 LABEL maintainer "me@seanland.ca"
 
 RUN apt-get -y update; \
