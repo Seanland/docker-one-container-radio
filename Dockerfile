@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:22.10
 LABEL maintainer "me@seanland.ca"
 
 RUN apt-get -y update; \
